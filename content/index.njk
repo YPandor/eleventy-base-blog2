@@ -5,6 +5,44 @@ eleventyNavigation:
   order: 1
 numberOfLatestPostsToShow: 3
 ---
+
+<div class="container">
+
+
+    <div class="row">
+            <nav>
+                <a class="navbar-brand" href="index.html">Yunus Pandor</a>
+                <a href="index.html">Home</a>
+                <a href="index.html">link 2</a>
+                <a href="index.html">link 3</a>
+            </nav>
+    <div id="hero_section" class="col-12">
+        <img src="./assets/hero image.jpg" alt="hero image" id="hero_image">
+    </div>
+
+    <div class="row">
+        <div id="skills" class="col-sm">
+            <h2>Key Skills</h2>
+            <ul class="list">
+                <li id="php_point">PHP</li>
+                <li>Larvel</li>
+                <li>Javascript</li>
+                <li>Vue.js</li>
+                <li>HTML</li>
+            </ul>
+        </div>
+        <div id="projects" class="col-sm">
+            <h2>Projects</h2>
+            <ul>
+                <li>Twitter Clone</li>
+                <li>Pizza Ordering Site</li>
+                <li>Image Uploading Site</li>
+            </ul>
+        </div>
+    </div>
+    
+</div>
+
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
 <h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
@@ -18,7 +56,6 @@ numberOfLatestPostsToShow: 3
 <p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/blog/">the archive</a>.</p>
 {% endif %}
 
-test
 
 {# List every content page in the project #}
 {#
